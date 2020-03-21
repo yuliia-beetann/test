@@ -1,0 +1,90 @@
+:root {
+    --main-color:#3e7c99;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #3e7c99;
+    font-family: sans-serif;
+    color: var(--main-color);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content {
+    padding: 32px;
+    background: white;
+    width: 480px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 28px;
+    text-align: center;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+}
+
+.answer-group {
+    padding: 8px 15px;
+    color: #fff;
+    margin: 0 10px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.answer-group:first-child {
+    background: #015369;
+
+}
+
+.answer-group:last-child {
+    background: #63246a;
+}
+
+input {
+    display: none;
+}
+
+input + .content {
+    display: none;
+    position: absolute;
+    color: var(--main-color);
+    left: 0;
+    top: 0;
+    align-items: center;
+    z-index: 10;
+}
+
+#yes:checked + .content, #no:checked + .content {
+    display: block;
+    display: flex;
+}
+
+.button {
+align-items: flex-end;
+padding: 10px 20px;
+background-color: #3e7c99;
+color: white;
+}
